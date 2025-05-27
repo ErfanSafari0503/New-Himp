@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 function Button({ children, type, func }) {
   //   const baseStyle = '';
   const style = {

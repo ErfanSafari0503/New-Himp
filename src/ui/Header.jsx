@@ -71,7 +71,7 @@ function Header() {
           <div className="w-full max-w-xs" onClick={menuToggle}>
             <Link
               to="/how-it-works"
-              className="flex items-center gap-5 rounded-xl bg-gray-300 px-5 py-3 text-lg font-semibold tracking-wide shadow-md shadow-gray-300/60"
+              className="font-DM-Sans flex items-center gap-5 rounded-xl bg-gray-300 px-5 py-3 text-lg font-semibold tracking-wide shadow-md shadow-gray-300/60"
             >
               <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-gray-100">
                 <LightBulbIcon className="size-4 text-gray-500" />
@@ -84,7 +84,7 @@ function Header() {
           <div className="w-full max-w-xs" onClick={menuToggle}>
             <Link
               to="/about-us"
-              className="flex items-center gap-5 rounded-xl bg-gray-300 px-5 py-3 text-lg font-semibold tracking-wide shadow-md shadow-gray-300/60"
+              className="font-DM-Sans flex items-center gap-5 rounded-xl bg-gray-300 px-5 py-3 text-lg font-semibold tracking-wide shadow-md shadow-gray-300/60"
             >
               <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-gray-100">
                 <UserGroupIcon className="size-4 text-gray-500" />
@@ -97,7 +97,7 @@ function Header() {
           <div className="w-full max-w-xs" onClick={menuToggle}>
             <Link
               to="/analyze"
-              className="flex items-center gap-5 rounded-xl bg-yellow-400 px-5 py-3 text-lg font-bold tracking-wide text-gray-800 shadow-lg shadow-yellow-400/40 transition hover:bg-yellow-500"
+              className="font-DM-Sans flex items-center gap-5 rounded-xl bg-yellow-400 px-5 py-3 text-lg font-bold tracking-wide text-gray-800 shadow-lg shadow-yellow-400/40 transition hover:bg-yellow-500"
             >
               <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-white">
                 <RocketLaunchIcon className="size-6 text-yellow-500" />
