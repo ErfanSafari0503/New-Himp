@@ -27,19 +27,6 @@ function Hero() {
           </span>
         </Link>
       </div>
-
-      {/* Analyze
-      <div className="w-full max-w-xs">
-        <Link
-          to="/analyze"
-          className="font-DM-Sans flex items-center gap-5 rounded-xl bg-yellow-400 px-5 py-3 text-lg font-bold tracking-wide text-gray-800 shadow-lg shadow-yellow-400/40 transition hover:bg-yellow-500"
-        >
-          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-white">
-            <RocketLaunchIcon className="size-6 text-yellow-500" />
-          </span>
-          Analyze
-        </Link>
-      </div> */}
     </section>
   );
 }

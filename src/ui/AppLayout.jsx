@@ -4,7 +4,7 @@ import Header from './Header';
 
 function AppLayout() {
   return (
-    <div className="h-dvh w-dvw bg-gray-100 pt-6">
+    <div className="h-full w-dvw bg-gray-100 pt-6">
       <Header />
 
       <main>
