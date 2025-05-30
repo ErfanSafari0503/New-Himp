@@ -8,7 +8,7 @@ function FeatureCard({ icon, title, description }) {
   const iconsStyle = 'size-10 text-gray-800';
 
   return (
-    <article className="flex h-fit w-full flex-col items-start justify-start rounded-3xl bg-gray-50 bg-white px-13 pt-15 pb-19">
+    <article className="flex h-fit w-full flex-col items-start justify-start rounded-3xl bg-white px-13 pt-15 pb-19 shadow-2xl">
       {/* Icon */}
       <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-yellow-500">
         {icon === 'CpuChipIcon' && <CpuChipIcon className={iconsStyle} />}
