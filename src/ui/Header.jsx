@@ -17,6 +17,16 @@ function Header() {
     setIsOpen(!isOpen);
   }
 
+  function handleLogoClick() {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -31,17 +41,15 @@ function Header() {
   return (
     <>
       {/* Always Visible Header Bar */}
-      <header className="sticky top-3 z-50 bg-transparent">
+      <header className="fixed top-6 right-0 left-0 z-50 bg-transparent">
         <nav>
-          <div className="mx-4 mt-6 flex flex-wrap items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg shadow-gray-400/30">
+          <div className="mx-4 flex flex-wrap items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg shadow-gray-400/30">
             {/* Logo */}
             <div>
               <Link
                 to="/"
                 className="font-Inter text-4xl font-bold tracking-widest text-gray-800"
-                onClick={() => {
-                  if (isOpen) setIsOpen(false);
-                }}
+                onClick={handleLogoClick}
               >
                 HIMP
               </Link>
