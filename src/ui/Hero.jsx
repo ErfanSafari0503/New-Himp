@@ -4,7 +4,7 @@ import { PaperAirplaneIcon } from '@heroicons/react/24/solid';
 function Hero() {
   return (
     <section className="px-4 text-center">
-      <h1 className="font-Inter mt-2 mb-5 text-4xl font-bold tracking-wide text-gray-800">
+      <h1 className="font-Inter mt-4 mb-5 text-4xl font-bold tracking-wide text-gray-800">
         See What Your Audience Truly Thinks
         <br />
         <span className="mt-1 text-yellow-500">
