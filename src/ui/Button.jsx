@@ -4,6 +4,7 @@ function Button({ children, type, to, func, color, shadow, linkStyle }) {
   const baseStyle = `rounded-2xl ${color} px-6 py-4 ${shadow}`;
   const style = {
     headerMenuIcon: 'transition-all duration-300',
+    goBack: 'font-DM-Sans text-lg font-semibold text-gray-600',
   };
 
   if (type === 'headerMenuIcon')
@@ -13,19 +14,28 @@ function Button({ children, type, to, func, color, shadow, linkStyle }) {
       </button>
     );
 
-  return (
-    <button className={baseStyle}>
-      <Link
-        to={to}
-        className={
-          linkStyle ||
-          'font-DM-Sans text-base font-semibold tracking-wide text-gray-800'
-        }
-      >
+  if (to)
+    return (
+      <button className={baseStyle}>
+        <Link
+          to={to}
+          className={
+            linkStyle ||
+            'font-DM-Sans text-base font-semibold tracking-wide text-gray-800'
+          }
+        >
+          {children}
+        </Link>
+      </button>
+    );
+
+  if (type === 'goBack') {
+    return (
+      <button className={style[type]} onClick={func}>
         {children}
-      </Link>
-    </button>
-  );
+      </button>
+    );
+  }
 }
 
 export default Button;

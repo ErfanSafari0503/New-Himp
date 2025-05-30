@@ -4,11 +4,13 @@ import Home from './ui/Home';
 import HowItWorks from './ui/HowItWorks';
 import AboutUs from './ui/AboutUs';
 import Analyze from './features/Analyze';
+import Error from './ui/Error';
 
 // Routing
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    errorElement: <Error />,
     children: [
       {
         path: '/',
