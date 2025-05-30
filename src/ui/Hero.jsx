@@ -19,11 +19,11 @@ function Hero() {
       <div className="flex items-center justify-center">
         <Link
           to="/analyze"
-          className="font-Inter flex max-w-fit items-center justify-center gap-3 rounded-xl bg-yellow-400 px-5 py-3 text-lg font-bold tracking-wide text-gray-800"
+          className="font-Inter group flex max-w-fit items-center justify-center gap-4 rounded-2xl bg-yellow-400 px-7 py-4 text-lg font-bold tracking-wide text-gray-800 shadow-lg shadow-yellow-400/30 transition-all duration-300 hover:bg-yellow-500 hover:shadow-xl hover:shadow-yellow-400/40"
         >
           Analyze Now
-          <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white">
-            <PaperAirplaneIcon className="size-6 text-yellow-500" />
+          <span className="flex h-11 w-11 transform items-center justify-center rounded-full bg-white transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+            <PaperAirplaneIcon className="size-5 text-yellow-500" />
           </span>
         </Link>
       </div>

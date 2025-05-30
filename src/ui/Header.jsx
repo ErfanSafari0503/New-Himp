@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { handleLogoClick } from '../utils/helpers';
 import {
   Bars4Icon,
   XMarkIcon,
@@ -17,14 +18,9 @@ function Header() {
     setIsOpen(!isOpen);
   }
 
-  function handleLogoClick() {
-    if (isOpen) {
-      setIsOpen(false);
-    }
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+  function logoClick() {
+    if (isOpen) setIsOpen(!isOpen);
+    handleLogoClick();
   }
 
   useEffect(() => {
@@ -49,7 +45,7 @@ function Header() {
               <Link
                 to="/"
                 className="font-Inter text-4xl font-bold tracking-widest text-gray-800"
-                onClick={handleLogoClick}
+                onClick={logoClick}
               >
                 HIMP
               </Link>

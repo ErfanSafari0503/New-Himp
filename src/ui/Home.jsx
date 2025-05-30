@@ -15,7 +15,7 @@ function Home() {
       {/* Brief "Quick Start Guide" Section */}
       <QuickStartGuide />
 
-      {/* Final Call to Action Section - Mobile First */}
+      {/* Final Call to Action Section  */}
       <FinalCallToAction />
     </div>
   );
