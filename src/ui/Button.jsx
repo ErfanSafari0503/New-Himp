@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom';
 
-function Button({ children, type, to, func, color, shadow, linkStyle }) {
+function Button({
+  children,
+  type,
+  styles,
+  to,
+  func,
+  disabled = false,
+  color,
+  shadow,
+  linkStyle,
+}) {
   const baseStyle = `rounded-2xl ${color} px-6 py-4 ${shadow}`;
   const style = {
     headerMenuIcon: 'transition-all duration-300',
@@ -36,6 +46,13 @@ function Button({ children, type, to, func, color, shadow, linkStyle }) {
       </button>
     );
   }
+
+  if (type === 'submit')
+    return (
+      <button className={styles} onClick={func} disabled={disabled}>
+        {children}
+      </button>
+    );
 }
 
 export default Button;

@@ -11,3 +11,14 @@ export function currentYear() {
     return currentYear;
 }
 
+export function validateInstagramPostUrl(postUrl) {
+    if (typeof postUrl !== 'string' || postUrl.trim() === '') {
+        return false;
+    }
+
+    const instagramRegex = new RegExp(
+    /^(?:https?:\/\/)?(?:www\.)?instagram\.com\/(?:p|reel|tv)\/([a-zA-Z0-9\-_]+)\/?(?:[\?].*)?$/
+  );
+
+  return instagramRegex.test(postUrl);
+}
