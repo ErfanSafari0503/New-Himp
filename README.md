@@ -1,7 +1,6 @@
-
 # 🚀 NEW-HIMP
 
-*Unleash Insights, Transform Social Engagement Instantly.*
+_Unleash Insights, Transform Social Engagement Instantly._
 
 ![last commit](https://img.shields.io/github/last-commit/your-username/new-himp?style=flat-square)
 ![JavaScript](https://img.shields.io/badge/javascript-98%25-yellow?style=flat-square)
@@ -66,8 +65,8 @@ npm start
 
 ### Testing
 
-> *Coming soon*  
-(Currently under development using `{test_framework}`)
+> _Coming soon_  
+> (Currently under development using `{test_framework}`)
 
 ```bash
 npm test
@@ -113,13 +112,13 @@ new-himp/
 
 ## 🗂 Project Index
 
-| Page            | Path              | Description                          |
-|-----------------|-------------------|--------------------------------------|
-| Home            | `/`               | Main landing and input UI            |
-| How It Works    | `/how-it-works`   | Step-by-step explanation             |
-| About Us        | `/about-us`       | Project background and team          |
-| Analyze         | `/analyze`        | Shows analysis result (output page)  |
-| 404             | `*`               | Custom not found screen              |
+| Page         | Path            | Description                         |
+| ------------ | --------------- | ----------------------------------- |
+| Home         | `/`             | Main landing and input UI           |
+| How It Works | `/how-it-works` | Step-by-step explanation            |
+| About Us     | `/about-us`     | Project background and team         |
+| Analyze      | `/analyze`      | Shows analysis result (output page) |
+| 404          | `*`             | Custom not found screen             |
 
 ---
 
@@ -166,4 +165,4 @@ Distributed under the **MIT License**. See [`LICENSE`](./LICENSE) for more infor
 
 ---
 
-> Built with 💙 by [Your Name](https://github.com/your-username)
+> Built with 💙 by [ErfanSafari0503](https://github.com/erfansafari0503)
