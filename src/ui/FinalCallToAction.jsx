@@ -1,14 +1,13 @@
-import { Link } from 'react-router-dom';
 import Button from './Button';
 
 function FinalCallToAction() {
   return (
-    <section className="px-4 py-12">
+    <section className="mx-auto max-w-4xl px-2 sm:px-4 md:px-8">
       <div className="mx-auto max-w-xl text-center">
-        <h2 className="font-Inter mb-4 text-2xl font-semibold tracking-wider text-gray-800">
+        <h2 className="font-Inter mb-4 text-2xl font-semibold tracking-wider text-gray-800 sm:text-3xl sm:tracking-wide">
           What Lies Beneath the Likes?
         </h2>
-        <p className="mb-10 text-base text-gray-500">
+        <p className="mb-10 text-base tracking-normal text-gray-500 sm:text-lg">
           Likes only tell part of the story. Our AI dives into comments and
           captions to reveal the true sentiment and deeper audience reactions
           hidden in plain sight.

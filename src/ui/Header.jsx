@@ -37,9 +37,9 @@ function Header() {
   return (
     <>
       {/* Always Visible Header Bar */}
-      <header className="fixed top-6 right-0 left-0 z-50 bg-transparent">
+      <header className="fixed top-6 right-0 left-0 z-50 bg-transparent px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-12">
         <nav>
-          <div className="mx-4 flex flex-wrap items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg shadow-gray-400/30">
+          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between rounded-full bg-white px-6 py-4 shadow-lg shadow-gray-400/30">
             {/* Logo */}
             <div>
               <Link
@@ -89,7 +89,7 @@ function Header() {
           onClick={menuToggle}
         />
         <div
-          className={`relative z-10 mx-auto mt-[136px] flex w-full max-w-xs flex-col items-center space-y-3 overflow-y-auto transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[calc(100vh-160px)] scale-100 opacity-100' : 'max-h-0 scale-95 opacity-0'}`}
+          className={`relative z-10 mx-auto mt-[136px] flex w-full max-w-xs flex-col items-center space-y-3 overflow-y-auto transition-all duration-500 ease-in-out sm:max-w-sm ${isOpen ? 'max-h-[calc(100vh-160px)] scale-100 opacity-100' : 'max-h-0 scale-95 opacity-0'}`}
           onClick={(e) => e.stopPropagation()}
         >
           {/* how it works */}

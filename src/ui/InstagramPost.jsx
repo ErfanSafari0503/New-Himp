@@ -1,66 +1,101 @@
-function InstagramPost({ username, postContent, caption, comments }) {
+import { useState } from 'react';
+
+import Comment from './Comment';
+import Button from './Button';
+
+import {
+  ChatBubbleOvalLeftIcon,
+  PaperAirplaneIcon,
+} from '@heroicons/react/24/outline';
+import { HeartIcon } from '@heroicons/react/24/solid';
+
+function InstagramPost({
+  username = 'alex_anderson',
+  postContent = 'https://placehold.co/600x600/3B82F6/FFFFFF?text=Post',
+  caption = 'Chasing waterfalls and finding paradise. What an incredible view!',
+  comments = [
+    { id: 1, username: 'maria_g', text: 'Absolutely stunning shot! ✨' },
+    {
+      id: 2,
+      username: 'adventure_awaits',
+      text: 'Wow, I need to go here! Where is this?',
+    },
+  ],
+}) {
+  const [showComments, setShowComments] = useState(false);
+
   return (
-    <div className="w-full max-w-xl overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+    <div className="mx-auto max-w-sm rounded-lg border border-gray-300/50 bg-white shadow-lg">
       {/* Post Header */}
-      <div className="flex items-center gap-3 border-b border-gray-100 px-4 py-3">
-        <div className="size-10 overflow-hidden rounded-full bg-gradient-to-tr from-yellow-400 to-purple-600 p-[2px]">
-          <div className="size-full rounded-full border-2 border-white">
-            <img
-              src="https://picsum.photos/200"
-              alt="profile"
-              className="size-full object-cover"
-            />
-          </div>
-        </div>
-        <div className="flex flex-col">
-          <span className="font-Inter text-sm font-semibold text-gray-900">
-            username
-          </span>
-          <span className="font-DM-Sans text-xs text-gray-500">
-            Original Post
-          </span>
-        </div>
+      <div className="flex items-center p-5">
+        <img
+          className="size-10 rounded-full object-cover"
+          src={`https://placehold.co/36x36/7C3AED/FFFFFF?text=A`}
+          alt={`${username}'s profile`}
+        />
+        <span className="font-Inter ml-3 text-base font-semibold tracking-normal text-gray-800">
+          {username}
+        </span>
       </div>
 
-      {/* Post Content */}
-      <div className="aspect-square w-full bg-gray-100">
+      {/* Post Content (Image) */}
+      <div className="w-full">
         <img
-          src="https://picsum.photos/800"
-          alt="post"
-          className="size-full object-cover"
+          className="h-auto w-full object-cover"
+          src={postContent}
+          alt={`Post by ${username}`}
         />
       </div>
 
-      {/* Post Caption */}
-      <div className="space-y-2 px-4 py-3">
-        <p className="font-DM-Sans text-sm">
-          <span className="font-Inter font-semibold text-gray-900">
-            username
-          </span>{' '}
-          This is a sample caption for the post with some hashtags #instagram
-          #post #sample
-        </p>
-        <span className="font-DM-Sans text-xs text-gray-500">2 HOURS AGO</span>
-      </div>
-
-      {/* Comments */}
-      <div className="border-t border-gray-100 px-4 py-3">
-        <div className="space-y-2">
-          <div className="flex items-start gap-2">
-            <span className="font-Inter text-sm font-semibold text-gray-900">
-              commenter
-            </span>
-            <p className="font-DM-Sans text-sm text-gray-600">
-              This is a sample comment on the post!
-            </p>
-          </div>
-          <div className="flex items-start gap-2">
-            <span className="font-Inter text-sm font-semibold text-gray-900">
-              another_user
-            </span>
-            <p className="font-DM-Sans text-sm text-gray-600">Great post! 👏</p>
-          </div>
+      {/* Post Footer */}
+      <div className="p-4">
+        <div className="flex items-center space-x-4">
+          <span className="flex items-center text-gray-800">
+            <HeartIcon className="size-7 text-red-600" />
+          </span>
+          <span className="flex items-center text-gray-800">
+            <ChatBubbleOvalLeftIcon className="size-7" />
+          </span>
+          <span className="flex items-center text-gray-800">
+            <PaperAirplaneIcon className="size-7" />
+          </span>
         </div>
+
+        {/* Caption */}
+        <div className="mt-4">
+          <p className="font-DM-Sans text-sm tracking-normal text-gray-700">
+            <span className="font-Inter mr-2 font-semibold text-gray-800">
+              {username}
+            </span>
+            {caption}
+          </p>
+        </div>
+
+        {/* Comments */}
+        {showComments ? (
+          <div className="mt-5">
+            {comments?.slice(0, 2).map((comment) => (
+              <Comment
+                key={comment.id}
+                username={comment.username}
+                content={comment.text}
+              />
+            ))}
+          </div>
+        ) : (
+          <Button
+            type="showMore"
+            styles="font-DM-Sans mt-5 cursor-pointer text-sm tracking-normal text-blue-500"
+            func={() => setShowComments(true)}
+          >
+            View all comments
+          </Button>
+        )}
+
+        {/* Timestamp */}
+        {/* <p className="mt-2 text-xs font-semibold text-gray-400 uppercase">
+          {postedAt}
+        </p> */}
       </div>
     </div>
   );

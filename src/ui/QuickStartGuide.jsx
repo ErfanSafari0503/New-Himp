@@ -3,7 +3,7 @@ import StackedVerticalLines from './StackedVerticalLines';
 
 function QuickStartGuide() {
   return (
-    <section className="bg-white px-4 pt-15 pb-13">
+    <section className="mx-auto max-w-3xl bg-white px-2 pt-15 pb-13 sm:px-4 md:rounded-3xl md:px-8">
       <div className="mx-auto max-w-3xl">
         <h2 className="font-Inter mb-15 text-center text-3xl font-bold tracking-wide text-gray-800">
           Easy as <span className="text-yellow-500">1</span> {''}

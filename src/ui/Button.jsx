@@ -53,6 +53,13 @@ function Button({
         {children}
       </button>
     );
+
+  if (type === 'showMore')
+    return (
+      <button className={styles} onClick={func}>
+        {children}
+      </button>
+    );
 }
 
 export default Button;

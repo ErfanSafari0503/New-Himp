@@ -4,7 +4,8 @@ import { sendPost } from '../services/postServices';
 //Helper-Functions
 import { validateInstagramPostUrl } from '../utils/helpers';
 import Button from '../ui/Button';
-// import InstagramPost from '../ui/InstagramPost';
+import InstagramPost from '../ui/InstagramPost';
+import OverallAnalyze from '../ui/OverallAnalyze';
 
 function Analyze() {
   const [postLink, setPostLink] = useState('');
@@ -34,8 +35,8 @@ function Analyze() {
   }
 
   return (
-    <div className="px-4 pt-30">
-      <h1 className="font-Inter mb-2 text-center text-3xl font-bold tracking-wider text-gray-800">
+    <div className="px-2 pt-24 sm:px-4 md:px-8 lg:px-16 xl:px-32 2xl:mx-auto 2xl:max-w-4xl">
+      {/* <h1 className="font-Inter mb-2 text-center text-3xl font-bold tracking-wider text-gray-800">
         Analyze Instagram Post
       </h1>
       <p className="font-DM-Sans text-center text-lg tracking-normal text-gray-400">
@@ -64,9 +65,10 @@ function Analyze() {
         >
           Analyze
         </Button>
-      </div>
+      </div> */}
 
-      {/* <InstagramPost /> */}
+      <InstagramPost />
+      <OverallAnalyze />
     </div>
   );
 }
