@@ -2,9 +2,9 @@
 
 _Unleash Insights, Transform Social Engagement Instantly._
 
-![last commit](https://img.shields.io/github/last-commit/your-username/new-himp?style=flat-square)
+![last commit](https://img.shields.io/github/last-commit/ErfanSafari0503/new-himp?style=flat-square)
 ![JavaScript](https://img.shields.io/badge/javascript-98%25-yellow?style=flat-square)
-![languages](https://img.shields.io/github/languages/count/your-username/new-himp?style=flat-square)
+![languages](https://img.shields.io/github/languages/count/ErfanSafari0503/new-himp?style=flat-square)
 
 Built with:
 
